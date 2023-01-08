@@ -11,12 +11,12 @@
 		}
 
 		td {
-			height: 50px;
+			height: 70px;
 			width: 50px;
 		}
 
         .fenyo {
-			background-color: green;
+			background-color: rgb(19, 112, 19);
         }
 		.talp {
 			background-color: rgba(87, 63, 10, 0.87);
