@@ -49,20 +49,52 @@
 <body>
     <!--img src="./sakk2/sakkbabuk.png" alt="Sakk figure"-->
 
+<script>
+	var sorszam=0;
+	var elso;
+	function kattint(elem)
+	{
+		//console.log(elem)
+		if(sorszam==0){
+
+			if(elem.dataset["babu"]!=""){
+
+				elso=elem;
+				sorszam++;
+			}
+			
+		}
+		else{
+			//lerakás
+			elem.classlist.add(elso.dataset["babu"]);
+			elso.dataset["babu"]=elso.dataset["babu"];
+			
+			//régi törlése
+			elso.classlist.remove(elso.dataset["babu"]);
+			elso-dataset["babu"]="";
+			
+			
+			sorszam=0;
+		}
+
+		console.log(sorszam);
+	}
+</script>
+
     <table>
         <tr>
             <td></td> <td>A</td> <td>B</td> <td>C</td> <td>D</td> <td>E</td> <td>F</td> <td>G</td> <td>H</td>
         </tr>
         <tr>
             <td>1</td>
-            <td class="fekete feherBastya"></td>
-            <td class="feherLo"></td>
-            <td class="fekete feherFuto"></td>
-            <td class="feherKiralyno"></td>
-            <td class="fekete feherKiraly"></td>
-            <td class="feherFuto"></td>
-            <td class="fekete feherLo"></td>
-            <td class="feherBastya"></td>
+            <td class="fekete feherBastya" data-babu="feherBastya" onclick="kattint(this)"></td>
+            <td class="feherLo" data-babu="feherLo" onclick="kattint(this)"></td>
+            <td class="fekete feherFuto" data-babu="feherFuto" onclick="kattint(this)"></td>
+            <td class="feherKiralyno" data-babu="feherKiralyno" onclick="kattint(this)"></td>
+            <td class="fekete feherKiraly" data-babu="feherKiraly" onclick="kattint(this)"></td>
+            <td class="feherFuto" data-babu="feherFuto" onclick="kattint(this)"></td>
+            <td class="fekete feherLo" data-babu="feherLo" onclick="kattint(this)"></td>
+            <td class="feherBastya" data-babu="feherBastya" onclick="kattint(this)"></td>
         </tr>
         <tr>
             <td>2</td>
@@ -77,7 +109,7 @@
         </tr>
         <tr>
             <td>3</td>
-            <td class="fekete"></td>
+            <td class="fekete" data-babu="" onclick="kattint(this)" ></td>
             <td></td>
             <td class="fekete"></td>
             <td></td>
