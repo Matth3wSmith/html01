@@ -55,10 +55,10 @@
 	function kattint(elem)
 	{
 		//console.log(elem)
-		if(sorszam==0){
-
-			if(elem.dataset["babu"]!=""){
-
+		if(sorszam==0)
+        {
+			if(elem.dataset["babu"]!="")
+            {
 				elso=elem;
 				sorszam++;
 			}
@@ -66,12 +66,12 @@
 		}
 		else{
 			//lerakás
-			elem.classlist.add(elso.dataset["babu"]);
+			elem.classList.add(elso.dataset["babu"]);
 			elso.dataset["babu"]=elso.dataset["babu"];
 			
 			//régi törlése
-			elso.classlist.remove(elso.dataset["babu"]);
-			elso-dataset["babu"]="";
+			elso.classList.remove(elso.dataset["babu"]);
+			elso.dataset["babu"]="";
 			
 			
 			sorszam=0;
