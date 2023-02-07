@@ -57,17 +57,29 @@
 		//console.log(elem)
 		if(sorszam==0)
         {
-			if(elem.dataset["babu"]!="")
+            //üreset ne lehessen felvenni
+			if(elem.dataset["babu"] && elem.dataset["babu"]!="")
             {
 				elso=elem;
 				sorszam++;
+                console.log(elem);
+                console.log(elem.dataset["babu"]);
 			}
 			
 		}
-		else{
+		else if(elem!==elso) //saját magára rakás ellen
+        {
+
+            //ha van ott bábu akkor törölje
+            if(elem.dataset["babu"]!="")
+            {
+                elem.classList.remove(elem.dataset["babu"]);
+                elem.dataset["babu"]="";
+            }
+
 			//lerakás
 			elem.classList.add(elso.dataset["babu"]);
-			elso.dataset["babu"]=elso.dataset["babu"];
+			elem.dataset["babu"]=elso.dataset["babu"];
 			
 			//régi törlése
 			elso.classList.remove(elso.dataset["babu"]);
@@ -119,7 +131,7 @@
         </tr>
         <tr>
             <td>3</td>
-            <td class="fekete" data-babu=""></td>
+            <td class="fekete"></td>
             <td></td>
             <td class="fekete"></td>
             <td></td>
@@ -163,25 +175,25 @@
         </tr>
         <tr>
             <td>7</td>
-            <td class="fekete feketeGyalog" data-babu="feherGyalog"></td>
-            <td class="feketeGyalog" data-babu="feherGyalog"></td>
-            <td class="fekete feketeGyalog" data-babu="feherGyalog"></td>
-            <td class="feketeGyalog" data-babu="feherGyalog"></td>
-            <td class="fekete feketeGyalog" data-babu="feherGyalog"></td>
-            <td class="feketeGyalog" data-babu="feherGyalog"></td>
-            <td class="fekete feketeGyalog" data-babu="feherGyalog"></td>
-            <td class="feketeGyalog" data-babu="feherGyalog"></td>
+            <td class="fekete feketeGyalog" data-babu="feketeGyalog"></td>
+            <td class="feketeGyalog" data-babu="feketeGyalog"></td>
+            <td class="fekete feketeGyalog" data-babu="feketeGyalog"></td>
+            <td class="feketeGyalog" data-babu="feketeGyalog"></td>
+            <td class="fekete feketeGyalog" data-babu="feketeGyalog"></td>
+            <td class="feketeGyalog" data-babu="feketeGyalog"></td>
+            <td class="fekete feketeGyalog" data-babu="feketeGyalog"></td>
+            <td class="feketeGyalog" data-babu="feketeGyalog"></td>
         </tr>
         <tr>
             <td>8</td>
             <td class="feketeBastya" data-babu="feketeBastya"></td>
-            <td class="fekete feketeLo"></td>
-            <td class="feketeFuto"></td>
-            <td class="fekete feketeKiralyno"></td>
-            <td class="feketeKiraly"></td>
-            <td class="fekete feketeFuto"></td>
+            <td class="fekete feketeLo" data-babu="feketeLo"></td>
+            <td class="feketeFuto" data-babu="feketeFuto"></td>
+            <td class="fekete feketeKiralyno" data-babu="feketeKiralyno"></td>
+            <td class="feketeKiraly" data-set="feketeKiraly"></td>
+            <td class="fekete feketeFuto" data-babu="feketeFuto"></td>
             <td class="feketeLo" data-babu="feketeLo"></td>
-            <td class="fekete feketeBastya" data-babu="feketeBastya>"</td>
+            <td class="fekete feketeBastya" data-babu="feketeBastya"</td>
         </tr>
     </table>
 </body>
