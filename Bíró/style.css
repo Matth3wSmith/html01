@@ -27,3 +27,11 @@ table {
 h1 {
     text-align: center;
 }
+
+.menuSor {
+    height: 125px;
+}
+
+.szegely {
+    border: 1px solid black;
+}
