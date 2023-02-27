@@ -7,7 +7,7 @@ body{
 }
 
 .kep{
-    border: 0;
+    border: 2px dotted red;
     float: right;
 }
 
@@ -37,11 +37,12 @@ table{
 }
 th, td{
     border: 1px dotted white;
-    padding: 5px 5px;
+    padding: 4px 20px;
 }
 td.kiemelt{
     color: red;
     font-weight: bold;
+    padding-left: 30px;
 }
 
 /* űrlap stíluselemek */
@@ -54,7 +55,7 @@ td.kiemelt{
     width: 300px;
 }
 #ajanlat_form input.meret{
-    width: 50px;
+    width: 70px;
 }
 
 /* szerkezeti st�luselemek */
