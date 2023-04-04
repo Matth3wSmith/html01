@@ -73,6 +73,7 @@
     text-shadow: 8px 8px 10px rgb(102, 14, 216);
     background-color: burlywood;
     text-align: center;
+    font-weight: bold;
 }
 
 #kilencedik {
@@ -87,11 +88,11 @@
 }
 
 #tizedik {
-    font-family: Tahoma, sans-serif;
-    font-size: 19px;
+    font-family: fantasy;
+    font-size: 28px;
     text-decoration: overline dotted rgb(44, 56, 44);
-    color:rgb(48, 165, 233);
+    color:rgb(218, 10, 89);
     text-shadow: 10px 4px 5px rgb(88, 139, 20);
-    background-color: rgba(131, 21, 94, 0.808);
-    font-weight: bold;
+    text-align: right;
+
 }
