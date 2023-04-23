@@ -124,6 +124,7 @@ section img#mountains_front
     position: relative;
     padding: 100px;
     background: #1c0522;
+    color: #fff;
 }
 .sec h2
 {
@@ -135,4 +136,27 @@ section img#mountains_front
 {
     font-size: 1.2em;
     color: #fff;
+}
+
+/* Innen már saját stílusok jönnek */
+
+.sec ul {
+    margin-left: 50px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.sec h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sec img {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.sec p code {
+    font-weight: 700;
 }
