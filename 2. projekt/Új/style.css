@@ -160,3 +160,41 @@ section img#mountains_front
 .sec p code {
     font-weight: 700;
 }
+
+/* moon taget meghagytam a logok képének, lehet nem jó ötlet */
+
+.hatterlogo {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    margin-top: 20px;
+}
+
+#cplusz{
+    width: 400px;
+    height: 400px;
+    margin-top: 0;
+}
+
+#csharplogo {
+    width: 250px;
+    height: 250px; 
+    left: 44%;
+}
+
+#javalogo {
+    width: 20%;
+    height: 45%;
+}
+
+#javascriptlogo {
+    width: 15%;
+    height: 37%;
+    left: 43%;
+}
+
+#csslogo {
+    width: 13%;
+    height: 39%;
+    left: 43%;
+}

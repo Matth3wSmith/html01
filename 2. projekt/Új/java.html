@@ -18,7 +18,8 @@
         </header>
         <section>
             <img src="stars.png" id="stars">
-            <img src="moon.png" id="moon">
+            <!--Meg van adva a logonak egy class is hogy ne kelljen többször ugyan azt irogatni a stílusban!-->
+            <img src="javalogo.svg" id="javalogo" class="hatterlogo">
             <img src="mountains_behind.png" id="mountains_behind">
             <h2 id="text">Java</h2>
             <a href="#sec" id="btn">Fedezd fel</a>
@@ -41,7 +42,7 @@
 
         <script>
             let stars = document.getElementById('stars');
-            let moon = document.getElementById('moon');
+            let javalogo = document.getElementById('javalogo');
             let mountains_behind = document.getElementById('mountains_behind');
             let text = document.getElementById('text');
             let btn = document.getElementById('btn');
@@ -50,7 +51,7 @@
             window.addEventListener('scroll', function(){
                 let value = window.scrollY;
                 stars.style.left = value * 0.25 + 'px';
-                moon.style.top = value * 1.05 + 'px';
+                javalogo.style.top = value * 1.05 + 'px';
                 mountains_behind.style.top = value * 0.5 + 'px';
                 mountains_front.style.top = value * 0 + 'px';
                 text.style.marginRight = value * 2.5 + 'px';
