@@ -89,10 +89,7 @@ section img
     object-fit: cover;
     pointer-events: none;
 }
-section img#moon
-{
-    mix-blend-mode: screen;
-}
+
 section img#mountains_front
 {
     z-index: 10;
@@ -102,7 +99,7 @@ section img#mountains_front
     position: absolute;
     top: 300px;
     right: -350px;
-    color: #fff;
+    color: rgb(15, 15, 92);
     white-space: nowrap;
     font-size: 7.5vw;
     z-index: 9;
@@ -118,6 +115,8 @@ section img#mountains_front
     font-size: 1.5em;
     z-index: 9;
     transform: translateY(100px);
+    position: relative;
+    top: -80px;
 }
 .sec
 {
@@ -161,30 +160,29 @@ section img#mountains_front
     font-weight: 700;
 }
 
-/* moon taget meghagytam a logok képének, lehet nem jó ötlet */
-
 .hatterlogo {
     position: absolute;
     top: 0;
-    left: 40%;
+    left: 41%;
     margin-top: 20px;
 }
 
 #cplusz{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     margin-top: 0;
 }
 
 #csharplogo {
     width: 250px;
     height: 250px; 
-    left: 44%;
+    left: 43.5%;
 }
 
 #javalogo {
     width: 20%;
     height: 45%;
+    left: 40%;
 }
 
 #javascriptlogo {
@@ -195,6 +193,6 @@ section img#mountains_front
 
 #csslogo {
     width: 13%;
-    height: 39%;
-    left: 43%;
+    height: 39.5%;
+    left: 44%;
 }
