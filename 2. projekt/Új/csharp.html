@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Parallax Scorllig Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">BMA</a>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="java.html">Java</a></li>
+                <li><a href="javascript.html">Javascript</a></li>
+                <li><a href="csharp.html" class="active">C#</a></li>
+                <li><a href="c++.html">C++</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <!--Meg van adva a logonak egy class is hogy ne kelljen többször ugyan azt irogatni a stílusban!-->
+            <img src="csharplogo.svg" id="csharplogo" class="hatterlogo">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">C#</h2>
+            <a href="#sec" id="btn">Fedezd fel</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+                <h2>C#</h2>
+                <p>
+                    A C#-t "C-Sharp"-nak ejtik. Ez a Microsoft által létrehozott objektumorientált programozási nyelv, amely a .NET-keretrendszeren fut.
+                    <br><br>
+                    A C# gyökerei a C családból származnak, és a nyelv közel áll más népszerű nyelvekhez, például a C++- hoz és a Java-hoz.
+                </p>
+                <h3>A C# a következőkre használatos:</h3>
+                <ul>
+                    <li>Mobil alkalmazások</li>
+                    <li>Asztali alkalmazások</li>
+                    <li>Webes alkalmazások</li>
+                    <li>Webszolgáltatások</li>
+                    <li>Weboldalak</li>
+                    <li>Játékok</li>
+                    <li>VR</li>
+                    <li>Adatbázis alkalmazások</li>
+                </ul>
+                <p>
+                    Az első verzió 2002-ben jelent meg. A legújabb verzió, a C# 11 2022 novemberében jelent meg.
+                </p>
+                <h3>Története:</h3>
+                <p>
+                    A C# fejlesztését Anders Hejlsberg vezette, aki a Turbo Pascal tervezője is volt. A .NET osztálykönyvtárait a programozók eredetileg egy sajátos, ún. SMC (Simple Managed C) nyelven írták. 1999-ben azonban Hejlsberg (aki addig a J++ nyelven dolgozott) vezetésével egy csapat alakult egy új programozási nyelv létrehozására, akkoriban COOL (C-szerű Objektum Orientált Nyelv) fedőnév alatt. A cél egy olyan nyelv megalkotása volt, mellyel teljesen objektumorientált módon lehet a keretrendszer komponenseit fejleszteni. Egy évvel később, 2000 júliusában a PDC konferencián a .NET-tel, és az ASP.NET-tel együtt a C#-ot is bemutatták, immár ezen névvel, hogy az esetleges szerzői jogi problémákat megelőzzék. Bár sok bírálat érte megjelenésekor, főleg a Java-s táborból, miszerint a Microsoft pusztán legyártotta a saját Java verzióját, Anders azt nyilatkozta, hogy a nyelvet sokkal inkább a C++-hoz szerették volna közelíteni.
+                </p>
+                <h3>Szintaxis</h3>
+                <img src="csharp.png" alt="c# kód">
+                <p>
+                    1. sor: using System azt jelenti, hogy használhatunk osztályokat a Systemnévtérből.
+                    <br><br>
+                    3. sor: namespace a kód rendszerezésére szolgál, és ez egy tároló osztályok és más névterek számára.
+                    <br><br>
+                    5. sor:  class egy tároló adatok és metódusok számára, amely funkcionalitást biztosít a programnak. Minden C#-ban futó kódsornak egy osztályon belül kell lennie. Példánkban az osztályt Programnak neveztük el.
+                    <br><br>
+                    7. sor: Egy másik dolog, ami mindig megjelenik a C# programokban, az a Mainmetódus. A göndör zárójelben lévő kódok {}végrehajtásra kerülnek. Nem kell értened a Main előtti és utáni kulcsszavakat. Az oktatóanyag olvasása során apránként megismerheti őket.
+                    <br><br>
+                    9. sor: Console a névtér egy osztálya System, amelynek van egy WriteLine()metódusa, amelyet szöveg kiadására/nyomtatására használnak. Példánkban a „Hello World!” szöveget írja ki.
+                </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let csharplogo = document.getElementById('csharplogo');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                csharplogo.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 2.5 + 'px';
+                text.style.marginTop = value * 0.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>

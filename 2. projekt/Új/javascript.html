@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JavaScript Progarmozás</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">BMA</a>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="java.html">Java</a></li>
+                <li><a href="javascript.html" class="active">Javascript</a></li>
+                <li><a href="csharp.html">C#</a></li>
+                <li><a href="c++.html">C++</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <!--Meg van adva a logonak egy class is hogy ne kelljen többször ugyan azt irogatni a stílusban!-->
+            <img src="javascriptlogo.png" id="javascriptlogo" class="hatterlogo">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">JavaScript</h2>
+            <a href="#sec" id="btn">Fedezd fel</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>JavaScript</h2>
+            <p>,,A JavaScript programozási nyelv egy objektumorientált, prototípus-alapú szkriptnyelv, amelyet weboldalakon elterjedten használnak.” </p>
+                <p>A Javascript programok windows alapú környezetben futtathatók továbbá a wscript.exe és a cscript.exe segítségével is.</p>
+                <p> A Microsoft 1995-ben kifejlesztette az Internet Explorert ami miatt a Netscape-pel böngészőháborúba keveredtek.</p>
+                <br><br>
+                <p>Később a Microsoft kifejlesztette a Netscape Navigator Javascript-feldolgozójának forásskódjával a sajátját, a JScriptet.</p>
+                <p>Bár a nyelvet szabványosították, mégis részben különbözően implementálják a JavaScriptet a különböző böngészők.</p>
+                <br><br>
+                <p>A 2000-es évek elején az Internet Explorer dominanciája idején a kliensoldali szkriptelés stagnált. Ez 2004-ben kezdett megváltozni, amikor a Netscape utódja, a Mozilla kiadta a Firefox böngészőt. A Firefoxot sokan jól fogadták, jelentős piaci részesedést szerzett az Internet Explorertől. </p>
+                <p>A Google 2008-ban mutatta be Chrome böngészőjét, a V8 JavaScript motorral, amely gyorsabb volt, mint versenytársai. A kulcsfontosságú újítás a just-in-time compilation (JIT) volt, így más böngészőgyártóknak is át kellett javítaniuk motorjaikat a JIT számára.<br><br></p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let javascriptlogo = document.getElementById('javascriptlogo');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                javascriptlogo.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 2.5 + 'px';
+                text.style.marginTop = value * 0.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>

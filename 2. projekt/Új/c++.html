@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Parallax Scorllig Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">BMA</a>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="java.html">Java</a></li>
+                <li><a href="javascript.html">Javascript</a></li>
+                <li><a href="csharp.html">C#</a></li>
+                <li><a href="c++.html" class="active">C++</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="eg2.jpg" id="stars">
+            <!--Meg van adva a logonak egy class is hogy ne kelljen többször ugyan azt irogatni a stílusban!-->
+            <img src="c++logo.png" id="cplusz" class="hatterlogo">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">C++</h2>
+            <a href="#sec" id="btn">Fedezd fel</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>C++</h2>
+            <p>
+				A C++ egy általános célú, magas szintű programozási nyelv. Támogatja a procedurális, az objektumorientált és a generikus programozást, valamint az adatabsztrakciót. Napjainkban szinte minden operációs rendszer alá létezik C++ fordító. A nyelv a C programozási nyelv hatékonyságának megőrzése mellett törekszik a könnyebben megírható, karbantartható és újrahasznosítható kód írására, ez azonban sok kompromisszummal jár, erre utal, hogy általánosan elterjedt a mid-level minősítése is, bár szigorú értelemben véve egyértelműen magas szintű.
+			</p>
+			<h3>Története</h3>
+			<p>
+				Bjarne Stroustrup kezdte el a C++ programozási nyelv fejlesztését a C programozási nyelv kiterjesztéseként. A nyelv első, nem kísérleti körülmények közt való használatára 1983-ban került sor, 1987-ben pedig nyilvánvalóvá vált, hogy a C++ szabványosítása elkerülhetetlen. Nevét Rick Mascitti találta ki. A C++ név kifejezi, hogy a nyelv a C kibővítése.
+			</p>
+			<h3>Jelkészlet</h3>
+			<p>
+				A kis- és nagybetűs angol ABC, általános írásjelek és a matematikai operátorok, jelek.
+			</p>
+			<h3>Azonosítók</h3>
+			<p>
+				A nyelv bizonyos összetevőire (változók, konstansok, függvények stb.) névvel hivatkozunk. A legtöbb fordító csak az első 32 karaktert veszi figyelembe a nevekben. A név első karaktere betű vagy aláhúzásjel lehet, ettől kezdődően már számok is szerepelhetnek benne. Lehetőleg saját névként ne adjunk meg aláhúzásjellel kezdődő nevet, mert ezek a fordító számára vannak fenntartva. A C++ különbséget tesz a kis- és nagybetűk között (case-sensitive).
+			</p>
+			<h3>A C++ programok szerkezete</h3>
+			<p>
+				Az úgynevezett „Helló, világ!” programot először Brian Kernigham és Dennis Richie alkalmazta A C programozási nyelv című könyvükben példaprogramként. Mindössze annyit csinál, hogy a képernyőre írja az üdvözletet.
+			</p>
+			<img src="c++.png" alt="c++ kód">
+			<p>
+				1. sor: <code> #include iostream </code>egy fejlécfájl-könyvtár , amely lehetővé teszi, hogy bemeneti és kimeneti objektumokkal dolgozzunk, például cout(az 5. sorban használt). A fejlécfájlok funkcionalitást adnak a C++ programokhoz.
+				<br><br>
+				2. sor: <code>using namespace std</code> azt jelenti, hogy használhatunk neveket a szabványos könyvtárból származó objektumokhoz és változókhoz.
+				<br><br>
+				4. sor: Egy másik dolog, ami mindig megjelenik a C++ programokban, az <code>int main()</code>. Ezt függvénynek nevezzük . A kapcsos zárójelben lévő kódok végrehajtásra kerülnek.
+				<br><br>
+				5.sor: <code>cout</code> egy objektum , amelyet a beszúrási operátorral <code>( )</code> együtt használnak a <code><<</code> szöveg kiadására/nyomtatására. Példánkban a „Hello World!” szöveget írja ki.
+				<br><br>
+				6. sor: <code>return 0 </code>befejezi a fő funkciót.
+			</p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let cplusz = document.getElementById('cplusz');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                cplusz.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 2.5 + 'px';
+                text.style.marginTop = value * 0.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
