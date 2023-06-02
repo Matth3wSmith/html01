@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url(ho_hatter.jpg);
+}
+
+/* fejl�c (header) st�luselemek */
+
+#header{
+    width: 100%;
+    height: 58px;
+    background: url("esti_hatter.jpg") repeat;
+    color: white;
+}
+#header h1{
+    height: 58px;
+    letter-spacing: 25px;
+    margin: 0;
+    padding: 8px 0;
+    text-align: center;
+}
+
+/* men� (nav) st�luselemek */
+
+#nav{
+    float: left;
+    margin-left: 0;
+    margin-right: -18%;
+    width: 16%;
+    background-color: #333;
+    border: solid 3px white;
+}
+
+#nav ul {
+    list-style-image: url(hopehely.png);
+}
+
+#nav ul li{
+    padding: 10px 0;
+
+}
+#nav ul li.aktiv{
+    font-weight: bold;
+}
+#nav a,
+#nav a:link,
+#nav a:visited{
+    color: yellow;
+    text-decoration: none;
+}
+#nav a:hover{
+    text-decoration: underline;
+}
+
+/* t�bl�zat st�luselemek */
+
+table{
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    background-color: #fff0f0;
+    width: 500px;
+    border: 1px solid #fcc;
+}
+table caption{
+    font-size: 22px;
+    padding: 5px;
+    border: solid 1px #fcc;
+    background-color: white;
+}
+table th{
+    padding: 5px 10px;
+    background-color: #f99;
+    color: #066;
+}
+table td{
+    padding: 5px;
+    border: dashed 1px #fcc;
+}
+.aside table{
+    border: solid 2px blue;
+}
+.aside table caption{
+    color: red;
+    padding: 5px;
+    font-weight: bold;
+}
+.aside table th{
+    background-color: #ffc;
+    color: #66f;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.aside table td{
+    background-color: #fff;
+    color: #666;
+    padding-left: 10px;
+}
+
+/* �rlap st�luselemek */
+
+form fieldset{
+    width: 500px;
+    padding: 10px;
+    margin: 10px;
+}
+form fieldset input[type='text']{
+    width: 450px;
+}
+
+
+/* egy�b st�luselemek */
+
+a, a:link, a:visited{
+    text-decoration: none;
+    color: red;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+
+
+#main{
+    float: left;
+    margin-left: 19%;
+    padding: 5px;
+    width: 80%;
+    
+}
+#main .article p img{
+    float: right; 
+    padding: 10px; 
+}
+#main .aside p img{
+    border: solid 1px #666;
+}
+
+#footer{
+    clear: both;
+    background-color: #333;
+    color: #999;
+    height: 25px;
+    text-align: center;
+}
